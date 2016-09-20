@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="weatherApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Weather</title>
+
+    <!-- <link rel="stylesheet" href="styles/style.css"> -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="scripts/directives/currentWeather.js">
+
+    </script>
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather App</h1>
+    </div>
+
+    <current-weather city="dallas">{{4*4}}</current-weather>
+
+  </body>
+</html>
