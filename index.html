@@ -6,22 +6,24 @@
 
     <title>Weather</title>
 
-    <!-- <link rel="stylesheet" href="styles/style.css"> -->
+    <link rel="stylesheet" href="styles/style.css">
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <script src="bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="scripts/directives/currentWeather.js">
-
-    </script>
+    <script type="text/javascript" src="scripts/controllers/currentWeatherController.js"></script>
+    <script type="text/javascript" src="scripts/directives/currentWeather.js"></script>
 
   </head>
   <body>
-    <div class="container">
-      <h1>Weather App</h1>
+    <div class="container" ng-controller="currentWeatherController as currentWeatherCtrl">
+      <h1>California Weather</h1>
+      <div class="row">
+        <div ng-repeat="cityName in currentWeatherCtrl.cities" class="col-md-3">
+          <current-weather city="{{cityName}}"></current-weather>
+        </div>
+
+      </div>
     </div>
-
-    <current-weather city="dallas">{{4*4}}</current-weather>
-
   </body>
 </html>

@@ -1,2 +1,9 @@
-<p>"hello template"</p>
-{{weather}}
+
+<div class="weather-widget">
+  <h1>{{city}}</h1>
+  <p>
+    <h2>{{(((currentWeatherCtrl.weather.main.temp-273.15) * 1.8 ) + 32) | number:1}}˚</h2>
+    <img ng-src="http://openweathermap.org/img/w/{{currentWeatherCtrl.weather.weather[0].icon}}.png" alt="" />
+    <h3>{{currentWeatherCtrl.weather.weather[0].description}}</h3>
+  </p>
+</div>
